@@ -11,6 +11,7 @@ import WebKit
 
 open class LLWebViewController: UIViewController, LLWebLoadable {
     
+    /// Request URL
     public var requestURL: URL?
 
     open override func viewDidLoad() {
