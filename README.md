@@ -17,7 +17,7 @@ LLWebViewController is available through [CocoaPods](https://cocoapods.org). To 
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'LLWebViewController'
+pod 'LLWebViewController', :git=>'https://github.com/ZHK1024/LLWebViewController.git'
 ```
 
 ## Author
