@@ -1,0 +1,27 @@
+PODS:
+  - LLObject (0.1.0)
+  - LLWebViewController (0.1.0):
+    - LLObject
+    - WKWebViewJavascriptBridge
+  - WKWebViewJavascriptBridge (1.2.1)
+
+DEPENDENCIES:
+  - LLWebViewController (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - LLObject
+    - WKWebViewJavascriptBridge
+
+EXTERNAL SOURCES:
+  LLWebViewController:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LLObject: 7c08770218a7c426a07ad8d749b3f75999ba8c2b
+  LLWebViewController: 4865a5b8514ac6a53c41ac8bdaeb9ce31061c2ed
+  WKWebViewJavascriptBridge: 07ad0cab27cd61ccdb90b5deb223f6df3a03c3d7
+
+PODFILE CHECKSUM: 3faaa7840e70ba88dd991633189e084db9a2a644
+
+COCOAPODS: 1.10.0
