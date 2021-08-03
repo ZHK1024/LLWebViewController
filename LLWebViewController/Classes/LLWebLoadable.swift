@@ -45,13 +45,23 @@ extension LLWebLoadable {
         return webView
     }
     
+    /// 创建 UI
     public func web_setupUI() {
         if webView.superview == nil {
             view.addSubview(webView)
         }
     }
     
+    /// 加载 URL
+    /// - Parameter url: 要加载的 URL
     public func load(url: URL) {
         webView.load(URLRequest(url: url))
+    }
+    
+    /// 从本地文件加载网页内容
+    /// - Parameter fileURL: 文件 URL
+    ///   - allowingReadAccessTo: 授权可访问文件夹 (当有依赖的外部文件, `css`, `js` 等, 此时需要授权对应文件夹的可读权限)
+    public func load(fileURL: URL, allowingReadAccessTo: URL? = nil) {
+        webView.loadFileURL(fileURL, allowingReadAccessTo: allowingReadAccessTo ?? fileURL.deletingLastPathComponent())
     }
 }
