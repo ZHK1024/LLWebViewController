@@ -25,6 +25,10 @@ public extension URL {
         }
         /// 拼接尾部
         /// 使用 relativeTo, 否则 URL 创建失败
-        return URL(string: ext, relativeTo: url)
+        /// iOS 12 无法加载这种 URL
+//        return URL(string: ext, relativeTo: url)
+        /// 兼容 iOS 使用 URL(string:) 初始化
+        return URL(string: url.absoluteString + ext)
+
     }
 }
